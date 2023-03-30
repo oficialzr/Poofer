@@ -1,0 +1,42 @@
+/* NAVBAR */
+
+.navbar {
+    height: 5vh;
+    border-style: solid;
+    border-color: black;
+}
+
+.navbar-content {
+    height: 100%;
+}
+
+.d-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    background: green;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    background-color: red;
+    margin-inline: 10px;
+}
+
+#poofer-index {
+    align-items: center;
+    padding-left: 5%;
+    background: red;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
