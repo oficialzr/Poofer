@@ -1,0 +1,76 @@
+/* NAVBAR */
+
+.nav {
+    border-radius: 0 0 30px 30px;
+    background-color: var(--ch-bg);
+}
+
+.navbar {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.navbar-content {
+    height: 100%;
+    width: 60%;
+}
+
+.d-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-content > div {
+    display: flex;
+}
+
+.navbar-content > div > .navbar__ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__ul > li {
+    margin-inline: 15px;
+}
+
+li > a {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+#poofer-index {
+    align-self: center;
+    font-size: 30px;
+    color: black;
+}
+
+#login {
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#login > a {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+#login > * > span {
+    font-size: 32px;
+    margin-left: 10px;
+}
