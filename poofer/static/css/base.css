@@ -32,6 +32,7 @@ body {
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
     background-color: var(--body-bg);
     font-family: var(--text-var);
     padding: 0 var(--pad-inner);
@@ -42,25 +43,203 @@ pre {
     font-weight: 500;
 }
 
+a {
+    text-decoration: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-start {
+    display: flex;
+    justify-content: center;
+}
+
 .startpage {
+    width: 100%;
     padding-top: 15vh;
     padding-bottom: 15vh;
 }
 
 /* MAIN PAGE */
 
+.cards-title {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.cards-main {
+    background: #E9E9E9 ;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 50vh);
+    grid-template-areas: 
+    "header header header"
+    "new-models models models"
+    ;
+    row-gap: 50px;
+    column-gap: 50px;
+
+    text-transform: uppercase;
+}
+
 .bigtext {
-    font-size: 100px;
+    font-size: 170px;
     font-weight: 600;
     line-height: 100%;
-    text-align: center;
-    padding-bottom: 5vh;
+    color: var(--bg-4rd);
+    text-shadow: 3px 3px 5px black;
+    pointer-events: none;
+}
+
+.title {
+    grid-area: header;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../images/main/vape-main.jpg');
+    background-position: center;
 }
 
 .new-models {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.models {
+    grid-area: models;
+    background-color: white;
+    z-index: -1;
+    padding: 10px 20px;
+}
+
+.models-img {
+    background-image: url('../images/main/rx200.jpg');
+    height: 100%;
     width: 100%;
-    height: 40vh;
-    border: 2px black solid;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 90%;
+    /* border: 1px black solid; */
+    align-self: center;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.secondary-img {
+    width: 60%;
+    height: 60%;
+    align-self: center;
+    background-size: 60%;
+    font-size: 30px;
+    opacity: 60%;
+}
+
+.left-img {
+    animation: to-back-anim 1s;
+}
+
+.right-img {
+    animation: to-main-anim 1s;
+}
+
+#main {
+    font-size: 50px;
+    background-image: url('../images/main/amaze.jpg');
+}
+
+.back-img {
+    width: 0%;
+    height: 0%;
+    background-size: 0%;
+    font-size: 0px;
+    animation: to-right-anim 1s;
+}
+
+/* ANIMATIONS NEW CARDS */
+
+.to-sec {
+    animation: to-sec-anim 1s;
+}
+
+@keyframes to-sec-anim {
+    from {
+        width: 100%;
+        height: 100%;
+        background-size: 90%;
+        font-size: 50px;
+        opacity: 100%;
+    } to {
+        width: 60%;
+        height: 60%;
+        background-size: 60%;
+        font-size: 30px;
+        opacity: 60%;
+    }
+}
+
+@keyframes to-main-anim {
+    from {
+        width: 60%;
+        height: 60%;
+        background-size: 60%;
+        font-size: 30px;
+        opacity: 60%;
+    } to {
+        width: 100%;
+        height: 100%;
+        background-size: 90%;
+        font-size: 50px;
+        opacity: 100%;
+    }
+}
+
+@keyframes to-back-anim {
+    from {
+        width: 60%;
+        height: 60%;
+        background-size: 60%;
+        font-size: 30px;
+        opacity: 60%;
+    } to {
+        width: 0%;
+        height: 0%;
+        background-size: 0%;
+        font-size: 0px;
+        opacity: 0%;
+    }
+}
+
+@keyframes to-right-anim {
+    from {
+        width: 0%;
+        height: 0%;
+        background-size: 0%;
+        font-size: 0px;
+        opacity: 0%;
+    } to {
+        width: 60%;
+        height: 60%;
+        background-size: 60%;
+        font-size: 30px;
+        opacity: 60%;
+    }
 }
 
 /* CATALOG PAGE */

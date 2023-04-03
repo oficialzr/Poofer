@@ -5,10 +5,33 @@
 {% block title %}Home{% endblock %}
 
 {% block main %}
-    <p class="bigtext">
-        POOFER<br>FOR ALL
-    </p>
-    <div class="new-models">
-
+    <div class="grid-container">
+        <!-- FIRST ROW -->
+        <div class="title">
+            <p class="bigtext">
+                POOFER
+            </p>
+        </div>
+        <div class="cards-main new-models">
+            <p class="cards-title">Новые поступления</p>
+        </div>
+        <!-- SECOND ROW -->
+        <div class="models">
+            <div class="slider">
+                <div class="models-img center-start secondary-img left-img">
+                    RX 100
+                </div>
+                <div class="models-img center-start main-img to-sec" id="main">
+                    RX 200
+                </div>
+                <div class="models-img center-start secondary-img right-img">
+                    RX 300
+                </div>
+                <div class="models-img center-start back-img">
+                    RX 400
+                </div>
+            </div>
+        </div>
+        <!-- THIRD ROW -->
     </div>
 {% endblock %}
